@@ -20,5 +20,6 @@
 #define FYClass(x)               NSStringFromClass([x class])
 #define WeakSelf(x)              __weak __typeof(x) weakSelf = x
 
+#define TableViewRegisterClass(tableview,classForCell) [tableview registerClass:classForCell forCellReuseIdentifier:NSStringFromClass(classForCell)]
 
 #endif

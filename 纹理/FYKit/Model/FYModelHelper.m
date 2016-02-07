@@ -30,7 +30,7 @@
         obj = [[[obj class] alloc] init];
     }
     
-    obj = [[obj class] objectWithKeyValues:response];
+    obj = [[obj class] mj_objectWithKeyValues:response];
 }
 
 - (void)updateModel:(id)response array:(NSMutableArray *)array model:(__unsafe_unretained Class)modelClass
@@ -41,7 +41,7 @@
     
     if ([response isKindOfClass:[NSArray class]]) {
         for (NSDictionary* dic in response) {
-            id obj = [modelClass objectWithKeyValues:dic];
+            id obj = [modelClass mj_objectWithKeyValues:dic];
             [array addObject:obj];
         }
     }

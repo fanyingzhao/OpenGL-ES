@@ -18,3 +18,9 @@
 #define COCOAPODS_VERSION_MINOR_FMDB_standard 6
 #define COCOAPODS_VERSION_PATCH_FMDB_standard 0
 
+// MJExtension
+#define COCOAPODS_POD_AVAILABLE_MJExtension
+#define COCOAPODS_VERSION_MAJOR_MJExtension 3
+#define COCOAPODS_VERSION_MINOR_MJExtension 0
+#define COCOAPODS_VERSION_PATCH_MJExtension 10
+

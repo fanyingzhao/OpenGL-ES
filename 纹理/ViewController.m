@@ -21,9 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.title = @"OpenGL ES";
     self.dataList = @[@[@"纹理映射模式",[GLKVC class]]];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    TableViewRegisterClass(self.tableView, [UITableViewCell class]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,9 +33,10 @@
 }
 
 #pragma mark - tools
-- (void)presentToViewController:(Class)class
+- (void)presentToViewController:(Class)class title:(NSString*)title
 {
     UIViewController* vc = [[class alloc] init];
+    vc.title = title;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -54,7 +56,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self presentToViewController:[self.dataList[indexPath.row] lastObject]];
+    [self presentToViewController:[self.dataList[indexPath.row] lastObject] title:[self.dataList[indexPath.row] firstObject]];
 }
 
 @end
