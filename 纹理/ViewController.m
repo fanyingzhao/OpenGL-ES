@@ -9,8 +9,10 @@
 #import "ViewController.h"
 #import "GLKVC.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray* dataList;
 @end
 
 @implementation ViewController
@@ -19,14 +21,40 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    GLKVC* vc = [[GLKVC alloc] init];
-    [self.view addSubview:vc.view];
-    [self addChildViewController:vc];
+    self.dataList = @[@[@"纹理映射模式",[GLKVC class]]];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - tools
+- (void)presentToViewController:(Class)class
+{
+    UIViewController* vc = [[class alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataList.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    cell.textLabel.text = [self.dataList[indexPath.row] firstObject];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self presentToViewController:[self.dataList[indexPath.row] lastObject]];
 }
 
 @end

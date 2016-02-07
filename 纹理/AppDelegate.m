@@ -3,7 +3,7 @@
 //  纹理
 //
 //  Created by fanyingzhao on 16/2/1.
-//  Copyright © 2016年 fyz. All rights reserved.
+//  Copyright ©daf 2016年 fyz. All rights reserved.
 //
 
 #import "AppDelegate.h"
