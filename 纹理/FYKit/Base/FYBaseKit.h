@@ -14,5 +14,6 @@
 #import "UIView+FYAdd.h"
 #import "UIColor+Additions.h"
 #import "NSString+Additions.h"
+#import "UIViewController+FYAdditions.h"
 
 #endif /* FYBaseKit_h */

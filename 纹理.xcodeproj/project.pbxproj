@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		392CB84A6399303EA74F691E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE06A4A5D8E19BEEA8CCC27 /* libPods.a */; };
+		62E74D091C72CEB100460CF7 /* UIViewController+FYAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E74D081C72CEB100460CF7 /* UIViewController+FYAdditions.m */; };
+		62E74D161C72CFE100460CF7 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E74D141C72CFE100460CF7 /* back@2x.png */; };
+		62E74D171C72CFE100460CF7 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E74D151C72CFE100460CF7 /* back@3x.png */; };
 		D1F101AA1C5FA1390093209A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F101A91C5FA1390093209A /* main.m */; };
 		D1F101AD1C5FA1390093209A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F101AC1C5FA1390093209A /* AppDelegate.m */; };
 		D1F101B01C5FA1390093209A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F101AF1C5FA1390093209A /* ViewController.m */; };
@@ -56,6 +59,10 @@
 
 /* Begin PBXFileReference section */
 		0CE06A4A5D8E19BEEA8CCC27 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62E74D071C72CEB100460CF7 /* UIViewController+FYAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+FYAdditions.h"; sourceTree = "<group>"; };
+		62E74D081C72CEB100460CF7 /* UIViewController+FYAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+FYAdditions.m"; sourceTree = "<group>"; };
+		62E74D141C72CFE100460CF7 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		62E74D151C72CFE100460CF7 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
 		7DC79B9134D5139F8DD2C91A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8E04B5C9A15B43B7CDC5DD18 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D1F101A51C5FA1390093209A /* 纹理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "纹理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +154,23 @@
 				8E04B5C9A15B43B7CDC5DD18 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		62E74D0A1C72CF9600460CF7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				62E74D0F1C72CFBF00460CF7 /* Nav */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		62E74D0F1C72CFBF00460CF7 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				62E74D141C72CFE100460CF7 /* back@2x.png */,
+				62E74D151C72CFE100460CF7 /* back@3x.png */,
+			);
+			path = Nav;
 			sourceTree = "<group>";
 		};
 		B09B7FE1422CCB086450E76F /* Frameworks */ = {
@@ -242,6 +266,7 @@
 				D1F102621C66F4810093209A /* Model */,
 				D1F102671C66F4810093209A /* Network */,
 				D1F102681C66F4810093209A /* Utility */,
+				62E74D0A1C72CF9600460CF7 /* Sources */,
 			);
 			path = FYKit;
 			sourceTree = "<group>";
@@ -276,6 +301,8 @@
 				D1F102501C66F4810093209A /* UIView+FYAdd.m */,
 				D1F102511C66F4810093209A /* UIViewAdditions.h */,
 				D1F102521C66F4810093209A /* UIViewAdditions.m */,
+				62E74D071C72CEB100460CF7 /* UIViewController+FYAdditions.h */,
+				62E74D081C72CEB100460CF7 /* UIViewController+FYAdditions.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -468,9 +495,11 @@
 			files = (
 				D1F101B81C5FA1390093209A /* LaunchScreen.storyboard in Resources */,
 				D1F101E51C60E3970093209A /* grid.png in Resources */,
+				62E74D171C72CFE100460CF7 /* back@3x.png in Resources */,
 				D1F101EF1C6234BE0093209A /* test16Png.jpg in Resources */,
 				D1F101E91C60F18C0093209A /* background.jpg in Resources */,
 				D1F101B51C5FA1390093209A /* Assets.xcassets in Resources */,
+				62E74D161C72CFE100460CF7 /* back@2x.png in Resources */,
 				D1F101E31C5FA9810093209A /* leaves.gif in Resources */,
 				D1F101B31C5FA1390093209A /* Main.storyboard in Resources */,
 			);
@@ -545,6 +574,7 @@
 				D1F102761C66F4810093209A /* NSObject+FYModel.m in Sources */,
 				D1F101AA1C5FA1390093209A /* main.m in Sources */,
 				D1F1026E1C66F4810093209A /* UIColor+Additions.m in Sources */,
+				62E74D091C72CEB100460CF7 /* UIViewController+FYAdditions.m in Sources */,
 				D1F102731C66F4810093209A /* FYDBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

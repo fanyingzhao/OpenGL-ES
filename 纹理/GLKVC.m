@@ -49,7 +49,7 @@ static const SceneVertex verticesTwo[] = {
 {
     [super viewDidLoad];
     
-    
+    [self setLeftBackButton];
     [self setOpenGL];
     [self.view addSubview:self.slider];
 }
